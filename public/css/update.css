@@ -1,0 +1,41 @@
+.iw_form {
+    background: #1f2833;
+    width: 350px;
+    margin: 30px auto;
+    font-size: 20px;
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iw_form .formSection {
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.iw_form .formFile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.iw_form .formFile label {
+    background: #66fcf1;
+    padding: 5px;
+    cursor: pointer;
+    color: #000000;
+    border-radius: 5px;
+}
+
+.iw_form button[type="submit"] {
+    width: 60%;
+    min-height: 35px;
+    border: 2px solid #66fcf1;
+    outline: none;
+    font-size: 20px;
+    color: #f9f9f9;
+    background: transparent;
+    cursor: pointer;
+}

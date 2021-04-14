@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: #0b0c10;
+    color: #f9f9f9;
+}
+
+.iw_header {
+    background: #1f2833;
+    display: flex;
+    height: 63px;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+}
+
+.iw_header__left,
+.iw_header__right {width: 25%;}
+.iw_header nav {width: 50%;}
+
+.iw_header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.iw_header nav ul li a {
+    text-decoration: none;
+    color: #f9f9f9;
+}

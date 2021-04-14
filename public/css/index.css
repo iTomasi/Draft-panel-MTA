@@ -1,0 +1,24 @@
+.content {
+    width: 1000px;
+    margin: 30px auto;
+}
+
+.table {font-size: 20px;}
+.i__crown {color: #f1c40f;}
+.i__bill {color: #2ecc71;}
+
+.table__players {
+    margin: 30px auto;
+    background: #1f2833;
+}
+
+.player {
+    display: flex;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.player__nickname,
+.player__points {width: 30%;}
+.player__krowns,
+.player__money {width: 20%;}

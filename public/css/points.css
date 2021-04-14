@@ -1,0 +1,10 @@
+.content {
+    width: 1000px;
+    margin: 30px auto;
+    padding-bottom: 30px;
+}
+
+.content h3 {
+    text-align: center;
+    font-size: 20px;
+}
