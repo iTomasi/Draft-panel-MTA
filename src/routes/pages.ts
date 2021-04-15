@@ -1,5 +1,7 @@
 import {Router} from "express";
 import connection from "../databases/mysql";
+import fs from "fs";
+import path from "path";
 
 const router = Router();
 
@@ -7,11 +9,11 @@ router.get("/", (req, res) => {
     connection.query("SELECT * FROM players", (err, resp) => {
         if (err) return console.log(err);
 
-        const orderingByPoints = resp.sort((a: any, b: any) => b.points - a.points)
+        const orderingByKrowns = resp.sort((a: any, b: any) => b.totalKrowns - a.totalKrowns)
 
         res.render("index.ejs", {
             title: "Home",
-            data: orderingByPoints
+            data: orderingByKrowns
         })
     })
 });
@@ -73,6 +75,29 @@ router.post("/get-data", (req, res) => {
     }
 
     res.json({message: "datas updated"})
+});
+
+router.get("/download-table", (req, res) => {
+
+    connection.query("SELECT * FROM players", (err, resp) => {
+        if (err) return console.log(err);
+
+        let text: string = "";
+        let fileName: string = `draft_krowns_cash${Date.now()}.txt`
+
+        const orderingTableByKrowns = resp.sort((a: any, b: any) => b.totalKrowns - a.totalKrowns);
+
+        for (let i = 0; i < orderingTableByKrowns.length; i++) {
+            text += `${orderingTableByKrowns[i].nickname}, ${orderingTableByKrowns[i].totalKrowns} Krowns, $${orderingTableByKrowns[i].totalCash} Cash\n`
+        }
+
+        fs.writeFileSync(path.join(__dirname, "../../public/files_txt/" + fileName), text);
+
+        res.download(path.join(__dirname, "../../public/files_txt/" + fileName))
+
+
+    })
+
 })
 
 export default router;

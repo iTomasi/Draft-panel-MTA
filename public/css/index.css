@@ -1,3 +1,28 @@
+.download_txt {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.download_txt button {
+    background: transparent;
+    border: 2px solid #66fcf1;
+    outline: none;
+    font-size: 20px;
+    color: #f9f9f9;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition-property: background color;
+    transition-duration: 0.5s;
+}
+
+.download_txt button:hover {
+    background: #66fcf1;
+    color: #000;
+    transition-property: background color;
+    transition-duration: 0.5s;
+}
+
 .content {
     width: 1000px;
     margin: 30px auto;
