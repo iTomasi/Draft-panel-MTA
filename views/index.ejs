@@ -16,7 +16,7 @@
     </div>
 
     <div class="content">
-        <div class="table" style="<%= data[0] === undefined ? 'display: none' : 'display: block'%>">
+        <div class="table">
             <div class="table__info" style="display: flex; text-align: center; background: #1f2833; padding: 10px 0;">
                 <span style="width: 30%;">Nickname</span>
                 <span style="width: 30%;">Points</span>
@@ -29,28 +29,13 @@
             </div>
 
             <div class="table__players">
-                <% for( let i = 0; i < data.length; i++ ) { %>
-
-                    <% if (data[i].totalKrowns > 0 || data[i].totalCash > 0) { %>
-                        <div class="player">
-                            <span class="player__nickname"><%= data[i].nickname %></span>
-                            <span class="player__points"><%= data[i].points %></span>
-                            <span class="player__krowns">
-                                <i class="i__crown fas fa-crown"></i>
-                                <%= data[i].totalKrowns %>
-                            </span>
-                            <span class="player__money">
-                                <i class="i__bill fas fa-money-bill"></i>
-                                <%= data[i].totalCash %>
-                            </span>
-                        </div>
-                    <% } %>
-                    
-                <% } %>
+                
             </div>
         </div>
     </div>
 
+
+    <%- include ("templates/scripts.ejs") %>
     <script src="/js/index.js"></script>
 </body>
 </html>

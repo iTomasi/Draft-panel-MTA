@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <%- include ("templates/head.ejs") %>
+    <link href="/css/deleteTable.css" rel="stylesheet"/>
+</head>
+<body>
+    <%- include ("templates/header.ejs") %>
+
+    <div class="grid">
+        <% for( let i = 0; i < data.length; i++ ) { %>
+            <div class="table">
+                <h3><%= data[i].name %></h3>
+                <button class="deleteBtn" type="button" data-db="<%= data[i].tableName %>">Delete</button>
+            </div>
+        <% } %>
+    </div>
+    
+
+    <%- include ("templates/scripts.ejs") %>
+    <script src="/js/deleteTable.js"></script>
+</body>
+</html>

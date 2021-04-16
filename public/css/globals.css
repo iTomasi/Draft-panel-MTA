@@ -23,6 +23,16 @@ body {
 .iw_header__right {width: 25%;}
 .iw_header nav {width: 50%;}
 
+.iw_header__left select {
+    background: #0b0c10;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 5px;
+    color: #f9f9f9;
+    width: 70%;
+}
+
 .iw_header nav ul {
     display: flex;
     justify-content: space-evenly;
@@ -32,4 +42,35 @@ body {
 .iw_header nav ul li a {
     text-decoration: none;
     color: #f9f9f9;
+}
+
+.iw_header__right-setting {
+    position: relative;
+}
+
+.iw_header__right-setting .i__cog {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.iw_header__right-setting-options {
+    position: absolute;
+    background: #1f2833;
+    display: none;
+    flex-direction: column;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60px;
+}
+
+.iw_header__right-setting-options a {
+    text-decoration: none;
+    color: #f9f9f9;
+    padding: 10px 0;
+}
+
+.iw_header__right-setting-options a:hover {
+    background: #66fcf1;
+    color: #000000;
 }

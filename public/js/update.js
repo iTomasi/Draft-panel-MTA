@@ -84,7 +84,7 @@ $form.addEventListener("submit", e => {
         const res = await axios.post("http://localhost:4000/get-data", {
             data: orderingArrayPlayers
         }, {
-            headers: {"Content-Type": "application/json"}
+            headers: {"Content-Type": "application/json", "x-access-table": localStorage.getItem("table")}
         })
 
         if (res.data.message !== "datas updated") return console.log(res);

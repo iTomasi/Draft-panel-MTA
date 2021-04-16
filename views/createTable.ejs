@@ -6,14 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
     <%- include ("templates/head.ejs") %>
-    <link href="/css/points.css" rel="stylesheet"/>
+    <link href="/css/form.css" rel="stylesheet"/>
 </head>
 <body>
     <%- include ("templates/header.ejs") %>
 
-    <div class="content"></div>
+    <form class="iw_form">
+        <div class="formSection">
+            <label>Table Name</label>
+            <input type="text" placeholder="Table Name..." name="table_name"/>
+        </div>
+
+        <button type="submit">Create Table</button>
+    </form>
 
     <%- include ("templates/scripts.ejs") %>
-    <script src="/js/points.js"></script>
+    <script src="/js/createTable.js"></script>
 </body>
 </html>
